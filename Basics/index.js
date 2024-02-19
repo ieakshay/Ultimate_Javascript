@@ -165,6 +165,189 @@
 //     console.log(`Username is ${anyobject.username} and Price is ${anyobject.price}`)
 // }
 
-// handleObject(user)
+// handleObject(user)  // passing already created object 
 
+// handleObject({           // directly passing object inside function
+//     username : "sam",
+//     price : 399
+// })
+
+//  Function with array //
+
+// const myNewArray = [100, 400, 600]
+
+// function HandleArray(getarray){
+//     return getarray[1]
+// }
+
+// console.log(HandleArray(myNewArray))
+
+// scope
+// Hoisting
+
+// This and Arrow function
+
+// const user = {
+
+//     username: "Akshay",
+//     price: 199,
+
+//     welcomeMessage: function(){
+//         console.log(`${this.username}, price for this course is ${this.price}`)  // this keyword can be used in function only when function is present inside object
+//     }
+// }
+
+// user.welcomeMessage()
+// user.username = "Tunchi"
+// user.welcomeMessage()
+
+// control flow in javascript
+
+//conditional checking
+
+// const loggedInFromGoogle = true 
+// const loggedInFromEmail = true
+
+// if(loggedInFromEmail || loggedInFromGoogle || (guest = true)){
+//   console.log("Successfully Logged in");
+// }
+
+// switch statement
+
+// const month = "jan"
+
+// switch (month) {
+//     case "jan":
+//         console.log("Current month is Jan"); 
+//         break;
+
+//     case "feb":
+//         console.log("Current month is feb"); 
+//         break;
+
+//     case "april":
+//         console.log("Current month is april"); 
+//         break;
+
+//     case "may":
+//         console.log("Current month is may"); 
+//         break;
+
+//     default:
+//         break;
+// }
+
+
+// Truthy and Falsy Values
+
+// Falsey
+// false, 0, -0, BgInt 0n, "", null, undefined, NaN
+
+//Truthy
+// "0", 'false', " ", [], {}, function(){}, 
+
+
+// +++++++Higer order array loops+++++++
+
+// +++++++forof loop+++++++
+
+//+++++++array example+++++++
+
+//  const numbers = ["one", "two", "three", "four"]
+//  for (const number of numbers) {
+//     console.log(`Numbers in words are ${number}`);
+//  }
+
+//+++++++string example+++++++
+
+// const ourState = "Maharashtra"
+// for (const state of ourState) {
+//     console.log(state);    
+// }
+
+
+// +++++++Maps+++++++
+
+// const map = new Map()
+// map.set('IN', "India")
+// map.set('USA', "United States of America")
+// map.set('UAE', "United Arab Emirates")
+// map.set('ENG', "England")
+// map.set('IN', "India")
+// console.log(map);
+
+// for (const [key, value] of map) {  // forof loop on map
+//     console.log(key, ':', value);
+// }
+
+// +++++++forof loop on Object - doesnt work hence we use forin loop+++++++
+
+// const myObject = {
+//     State : "Maharashtra",
+//     capital : "mumbai"
+// }
+
+// for (const [key, value] of myObject) { // Wont work on Objects
+//     console.log(key, ":", value);
+// }
+
+// for (const key in myObject) {  // for objects we use forin loop
+//     console.log(`${key} is ${myObject[key]}`)
+// }
+
+// +++++++forin loop on array - example+++++++
+
+// const lanuages = ["Java", "C++", "Ruby", "Javacsript", "Python", "Golang"]
+
+// for (const key in lanuages) {
+//     console.log(`Programming languges are ${lanuages[key]}`);
+// }
+
+// +++++++forin loop dosent work on Map+++++++ 
+
+// +++ foreach loop +++
+
+const lanuages = ["Java", "C++", "Ruby", "Javacsript", "Python", "Golang"]
+
+// lanuages.forEach( function (val) { // simple funcxtion 
+//     console.log(val);
+// })
+
+// lanuages.forEach((item) => {  // Using Arrow function
+//     console.log(item);
+// })
+
+
+// passing a function in for each loop 
+
+// function printMe(item){
+//     console.log(item);
+// }
+
+// lanuages.forEach(printMe)
+
+
+// Accessing objects from array using forEach loop
+
+// const languages = [
+//     {
+//         language: "Javascript",
+//         extension: "js"
+//     },
+//     {
+//         language: "Java",
+//         extension: "java"
+//     },
+//     {
+//         language: "Python",
+//         extension: "py"
+//     }
+// ]
+
+// languages.forEach( (item) => {
+//     console.log(`Language is ${item.language} and extension is ${item.extension}`);
+// })
+
+
+// ++++ MAP FILTER AND REDUCE ++++
 
