@@ -56,7 +56,7 @@
 //undefined > 0
 //undefined < 0
 
-// string and its methods done  //
+// string and its methods done //
 // const name = new String("neel-nitin-mukesh")
 // console.log(name)
 
@@ -65,13 +65,13 @@
 
 // Date and Time //
 
-// // Array and its methods
+// Array and its methods
 // const arr1 = [0,2,4,6]
 // const arr2 = [1,3,5]
 
-// const newArray = [...arr1, ...arr2] 
+// Example - spread operator
+// const newArray = [...arr1, ...arr2]
 // console.log(newArray)
-
 
 // const arr3 = [0, 1, [2, [3, [4, 5]]]];
 // console.log(arr3.flat(Infinity))
@@ -249,7 +249,7 @@
 
 // +++++++Higer order array loops+++++++
 
-// +++++++forof loop+++++++
+// +++++++forof loop+++++++ (Use in Array, Map, Set) - Array Specific loop
 
 //+++++++array example+++++++
 
@@ -265,8 +265,7 @@
 //     console.log(state);    
 // }
 
-
-// +++++++Maps+++++++
+// +++++++Maps+++++++ // maps does not repeate same values (also known for unique values) and also follows order in which data provided 
 
 // const map = new Map()
 // map.set('IN', "India")
@@ -276,7 +275,7 @@
 // map.set('IN', "India")
 // console.log(map);
 
-// for (const [key, value] of map) {  // forof loop on map
+// for (const [key,  value] of map) {  // forof loop on map
 //     console.log(key, ':', value);
 // }
 
@@ -291,25 +290,35 @@
 //     console.log(key, ":", value);
 // }
 
+
+// +++++++forin loop on array - example+++++++ Object Specific loop
+
+// Example - Object
+// const myObject = {
+//     State : "Maharashtra",
+//     capital : "mumbai"
+// }
+
 // for (const key in myObject) {  // for objects we use forin loop
 //     console.log(`${key} is ${myObject[key]}`)
 // }
 
-// +++++++forin loop on array - example+++++++
-
+// Example - Array
 // const lanuages = ["Java", "C++", "Ruby", "Javacsript", "Python", "Golang"]
 
 // for (const key in lanuages) {
 //     console.log(`Programming languges are ${lanuages[key]}`);
 // }
 
-// +++++++forin loop dosent work on Map+++++++ 
+// +++++++for in loop dosent work properly on Map and on arrays it is meant for objects only+++++++
 
-// +++ foreach loop +++
 
-const lanuages = ["Java", "C++", "Ruby", "Javacsript", "Python", "Golang"]
 
-// lanuages.forEach( function (val) { // simple funcxtion 
+// +++ forEach loop +++
+
+// const lanuages = ["Java", "C++", "Ruby", "Javacsript", "Python", "Golang"]
+
+// lanuages.forEach( function (val) { // simple function 
 //     console.log(val);
 // })
 
@@ -348,6 +357,71 @@ const lanuages = ["Java", "C++", "Ruby", "Javacsript", "Python", "Golang"]
 //     console.log(`Language is ${item.language} and extension is ${item.extension}`);
 // })
 
+// forEach
 
-// ++++ MAP FILTER AND REDUCE ++++
+
+// ++++ FILTER MAP AND REDUCE ++++
+
+// Operation on simple array
+
+// const myNums = [1,2,3,4,5,6,7,8,9,10]  
+// const myVar = myNums.filter((nums) => (nums > 5))
+// console.log(myVar);
+
+// Operation on array of object 
+
+// const books = [ 
+//     {
+//         name: "book1",
+//         published: 1990,
+//         edition: 2004,
+//         genre: "fiction"
+//     },
+//     {
+//         name: "book2",
+//         published: 1992,
+//         edition: 2001,
+//         genre: "history"
+//     },
+//     {
+//         name: "book3",
+//         published: 1993,
+//         edition: 2002,
+//         genre: "non-fiction"
+//     },
+//     {
+//         name: "book4",
+//         published: 1994,
+//         edition: 2004,
+//         genre: "fiction"
+//     },
+//     {
+//         name: "book5",
+//         published: 1995,
+//         edition: 2002,
+//         genre: "history"
+//     }
+// ]
+
+// Filter Operation on array of object
+// const bookList = books.filter((book) => (book.edition === 2002) && (book.genre === "history")) 
+// console.log(bookList);
+
+// forof Operation on array of object 
+
+// for (const book of books) {
+//     if((book.edition == 2002) && (book.genre == "history")){
+//         console.log(book);
+//     } 
+//     else{
+//         console.log("No Match");
+    // }   
+// }
+
+// map (callback function, alt option for forEach)
+
+// const nums = [1,2,3,4,5,6,7,8,9,10]
+
+// const myNums = nums.map( (num) => num * 10 ).map((num) => num + 1).filter((num) => (num >= 50))
+// console.log(myNums)
 
