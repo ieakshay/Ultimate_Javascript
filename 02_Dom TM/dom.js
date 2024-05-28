@@ -142,12 +142,37 @@ var itemList = document.querySelector("#items");
 // }
 
 
-var button = document.getElementById("button").addEventListener("dblclick", runEvent);
+// Types of events
 
-function runEvent(){
-    console.log("hello")
+// double click
+// var button = document.getElementById("button").addEventListener("dblclick", runEvent);
+
+// // mouse down
+// var button = document.getElementById("button").addEventListener("mousedown", runEvent);
+
+// // mouse up
+// var button = document.getElementById("button").addEventListener("mouseup", runEvent);
+
+// mouse enter
+
+// var box = document.getElementById("box");
+
+// box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+
+// box.addEventListener('mouseover', runEvent);
+// box.addEventListener('mouseout', runEvent);
+
+// box.addEventListener('mousemove', runEvent);
+
+var itemInput = document.querySelector('input[type="text"]');
+
+itemInput.addEventListener('keydown', runEvent)
+
+function runEvent(e){
+    console.log('Event Type: '+e.type)
+console.log(e.target.value)
 }
-
 
 
 
